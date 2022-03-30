@@ -31,8 +31,8 @@ def resize(img):
 
         im1.save(os.path.split(img)[0]+"/res_"+os.path.split(img)[1])
     
-    else:
+    if (width == height):
         im1 = im.resize((end_largest_size,end_largest_size))
         im1.save(os.path.split(img)[0]+"/res_"+os.path.split(img)[1])
         
-    os.remove(img)
+    #os.remove(img)
